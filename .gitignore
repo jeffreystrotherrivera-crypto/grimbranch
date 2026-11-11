@@ -1,0 +1,8 @@
+# Demo-video capture scratch (the final demo/grimbranch-demo.mp4 is kept)
+demo/*.mkv
+demo/*.log
+demo/record-*.png
+.DS_Store
+
+# NOTE: the .kiro directory is part of the submission and must NEVER be
+# ignored — Kiroween rules require it at the repo root, visible.
