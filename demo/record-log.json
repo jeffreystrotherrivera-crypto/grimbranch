@@ -1,0 +1,101 @@
+[
+ {
+  "t": "6.8s",
+  "event": "loaded"
+ },
+ {
+  "t": "24.6s",
+  "rec": "17.8",
+  "event": "narration shown"
+ },
+ {
+  "t": "26.1s",
+  "rec": "19.3",
+  "clicked": "enter the house"
+ },
+ {
+  "t": "30.8s",
+  "rec": "24.0",
+  "clicked": "Climb the stairs"
+ },
+ {
+  "t": "37.4s",
+  "rec": "30.6",
+  "clicked": "smells of paper"
+ },
+ {
+  "t": "42.6s",
+  "rec": "35.8",
+  "clicked": "return to the landing"
+ },
+ {
+  "t": "46.0s",
+  "rec": "39.2",
+  "clicked": "back down to the hall"
+ },
+ {
+  "t": "49.2s",
+  "rec": "42.4",
+  "clicked": "Return to the gate"
+ },
+ {
+  "t": "52.6s",
+  "rec": "45.8",
+  "clicked": "Walk the grounds"
+ },
+ {
+  "t": "56.1s",
+  "rec": "49.3",
+  "clicked": "gardener"
+ },
+ {
+  "t": "60.3s",
+  "rec": "53.5",
+  "clicked": "Return to the grounds"
+ },
+ {
+  "t": "63.2s",
+  "rec": "56.4",
+  "clicked": "back to the gate"
+ },
+ {
+  "t": "66.0s",
+  "rec": "59.2",
+  "clicked": "enter the house"
+ },
+ {
+  "t": "69.1s",
+  "rec": "62.3",
+  "clicked": "Climb the stairs"
+ },
+ {
+  "t": "72.4s",
+  "rec": "65.6",
+  "clicked": "Unlock the narrow door"
+ },
+ {
+  "t": "77.6s",
+  "rec": "70.8",
+  "clicked": "Ring the bell for him"
+ },
+ {
+  "t": "84.5s",
+  "rec": "77.7",
+  "event": "ending reached"
+ },
+ {
+  "t": "96.4s",
+  "rec": "89.6",
+  "event": "map shown"
+ },
+ {
+  "t": "107.2s",
+  "rec": "100.4",
+  "event": "workshop error shown"
+ },
+ {
+  "t": "119.9s",
+  "rec": "113.1",
+  "event": "restored and replayed"
+ }
+]
