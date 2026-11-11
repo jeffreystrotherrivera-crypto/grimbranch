@@ -1,0 +1,1 @@
+{"description":"Whenever the story text or the validator changes, run the Node test suite so a broken passage format or a validator regression is caught at save time, not at demo time.","name":"Validate story on save","then":{"command":"node tests/validator.test.mjs","type":"runCommand"},"when":{"patterns":["story.js","validator.js","tests/*.mjs"],"type":"fileEdited"}}
