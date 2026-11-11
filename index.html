@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrimBranch — a haunted choose-your-path story engine</title>
+<meta name="description" content="A haunted branching-story engine stitched from a gamebook player, a live story validator with a map, and read-aloud narration. Play 'The Ninth Bell', or write and test your own tale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="fog fog-a"></div>
+<div class="fog fog-b"></div>
+
+<header class="site-head">
+  <div class="candle" aria-hidden="true"><span class="flame"></span><span class="wick"></span><span class="wax"></span></div>
+  <h1>GrimBranch</h1>
+  <p class="tagline">A haunted choose-your-path story engine — a gamebook, a writing
+  workshop and a storyteller, stitched into one.</p>
+  <p class="endings-line">Endings found: <strong id="endingsCount">0 of 4</strong></p>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab active" id="tabPlay" data-view="play" role="tab">📖&ensp;Read</button>
+  <button class="tab" id="tabMap" data-view="map" role="tab">🗺&ensp;Story Map</button>
+  <button class="tab" id="tabWorkshop" data-view="workshop" role="tab">🖋&ensp;Workshop</button>
+</nav>
+
+<main>
+  <!-- PLAY ------------------------------------------------------------ -->
+  <section id="view-play" class="view active">
+    <article class="page-card">
+      <h2 id="passageTitle">The Gate</h2>
+      <div id="passageBody" class="passage-body" title="Click to reveal the whole passage"></div>
+      <div id="endingBanner" class="ending-banner hidden"></div>
+      <div class="narrate-bar">
+        <button id="listenBtn" class="ghost-btn">🔊&ensp;Listen</button>
+        <button id="stopBtn" class="ghost-btn hidden">⏹&ensp;Stop</button>
+        <span id="narrateNote" class="narrate-note"></span>
+      </div>
+      <div id="choices" class="choices"></div>
+      <div class="play-controls">
+        <button id="restartBtn" class="ghost-btn">↩&ensp;Begin the night again</button>
+      </div>
+    </article>
+  </section>
+
+  <!-- MAP ------------------------------------------------------------- -->
+  <section id="view-map" class="view">
+    <article class="page-card wide">
+      <h2>The Shape of the Tale</h2>
+      <p class="hint">Every passage is a room; every line is a choice. Gold is where
+      you stand, parchment is where you have been, and an ending wears a bell.</p>
+      <div id="mapWrap" class="map-wrap"></div>
+      <div class="legend">
+        <span><i class="sw cur"></i> You are here</span>
+        <span><i class="sw seen"></i> Visited</span>
+        <span><i class="sw unseen"></i> Not yet found</span>
+        <span><i class="sw end"></i> 🔔 Ending</span>
+        <span><i class="sw lost"></i> Lost (unreachable)</span>
+      </div>
+    </article>
+  </section>
+
+  <!-- WORKSHOP -------------------------------------------------------- -->
+  <section id="view-workshop" class="view">
+    <article class="page-card wide">
+      <h2>The Writing Workshop</h2>
+      <p class="hint">The story below is the exact text the engine plays — the built-in
+      tale, or your own draft. Edit it, and the validator checks every path
+      while the map redraws itself. Break something on purpose: delete a
+      passage the choices still point to, and watch it get caught.</p>
+      <textarea id="storyEditor" spellcheck="false" aria-label="Story text editor"></textarea>
+      <div class="workshop-actions">
+        <button id="playDraftBtn" class="solid-btn">▶&ensp;Play this draft</button>
+        <button id="restoreBtn" class="ghost-btn">Restore “The Ninth Bell”</button>
+      </div>
+      <h3>Validator’s report</h3>
+      <div id="validateReport" class="report"></div>
+      <h3>How the format works</h3>
+      <pre id="formatDoc" class="format-doc"></pre>
+    </article>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <p>GrimBranch runs entirely in your browser — no account, no tracking.
+  Your endings and your drafts stay on your own machine.</p>
+</footer>
+
+<script src="validator.js"></script>
+<script src="story.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
